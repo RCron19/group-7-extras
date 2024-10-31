@@ -1,7 +1,7 @@
 
 services:
   react-app:
-    build: ./front-end  # Path to your React app Dockerfile
+    image: public.ecr.aws/c3y1y0l4/rcron/softeng-group7:latest  # Path to your React app Dockerfile
     ports:
       - "80:3000"
     environment:
@@ -10,7 +10,7 @@ services:
       - my-network
 
   api:
-    build: ./back-end  # Path to your API Dockerfile
+    image: public.ecr.aws/c3y1y0l4/rcron/softeng-group7-api:latest  # Path to your API Dockerfile
     ports:
       - "5000:5000"
     networks:
