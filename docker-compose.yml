@@ -1,0 +1,21 @@
+
+services:
+  react-app:
+    build: ./front-end  # Path to your React app Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - my-network
+
+  api:
+    build: ./back-end  # Path to your API Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
