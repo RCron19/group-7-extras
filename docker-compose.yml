@@ -3,7 +3,7 @@ services:
   react-app:
     image: public.ecr.aws/c3y1y0l4/rcron/softeng-group7:latest  # Path to your React app Dockerfile
     ports:
-      - "3000:3000"
+      - "80:3000"
     environment:
       - NODE_ENV=production
     networks:
