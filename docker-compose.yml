@@ -6,12 +6,8 @@ services:
       - "80:3000"
     environment:
       - NODE_ENV=production
-    networks:
-      - my-network
 
   api:
     image: public.ecr.aws/c3y1y0l4/rcron/softeng-group7-api:latest  # Path to your API Dockerfile
     ports:
       - "5000:5000"
-    networks:
-      - my-network
